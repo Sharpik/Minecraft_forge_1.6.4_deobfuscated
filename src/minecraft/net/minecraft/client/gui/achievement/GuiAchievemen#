@@ -1,0 +1,21 @@
+***************
+*** 352,360 ****
+          int l4;
+          int i5;
+  
+-         for (k3 = 0; k3 < AchievementList.achievementList.size(); ++k3)
+-         {
+-             Achievement achievement2 = (Achievement)AchievementList.achievementList.get(k3);
+              j4 = achievement2.displayColumn * 24 - k;
+              l3 = achievement2.displayRow * 24 - l;
+  
+--- 381,389 ----
+          int l4;
+          int i5;
+  
++         for (k3 = 0; k3 < achievementList.size(); ++k3)
++         {
++             Achievement achievement2 = (Achievement)achievementList.get(k3);
+              j4 = achievement2.displayColumn * 24 - k;
+              l3 = achievement2.displayRow * 24 - l;
+  

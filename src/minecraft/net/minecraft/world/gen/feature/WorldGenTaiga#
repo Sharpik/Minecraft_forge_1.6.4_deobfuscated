@@ -1,0 +1,39 @@
+***************
+*** 89,95 ****
+                              {
+                                  int i4 = l3 - par5;
+  
+-                                 if ((Math.abs(k3) != k2 || Math.abs(i4) != k2 || k2 <= 0) && !Block.opaqueCubeLookup[par1World.getBlockId(i3, j3, l3)])
+                                  {
+                                      this.setBlockAndMetadata(par1World, i3, j3, l3, Block.leaves.blockID, 1);
+                                  }
+--- 95,104 ----
+                              {
+                                  int i4 = l3 - par5;
+  
++                                 Block block = Block.blocksList[par1World.getBlockId(i3, j3, l3)];
++ 
++                                 if ((Math.abs(k3) != k2 || Math.abs(i4) != k2 || k2 <= 0) &&
++                                     (block == null || block.canBeReplacedByLeaves(par1World, i3, j3, l3)))
+                                  {
+                                      this.setBlockAndMetadata(par1World, i3, j3, l3, Block.leaves.blockID, 1);
+                                  }
+***************
+*** 119,125 ****
+                      {
+                          i3 = par1World.getBlockId(par3, par4 + j3, par5);
+  
+-                         if (i3 == 0 || i3 == Block.leaves.blockID)
+                          {
+                              this.setBlockAndMetadata(par1World, par3, par4 + j3, par5, Block.wood.blockID, 1);
+                          }
+--- 128,136 ----
+                      {
+                          i3 = par1World.getBlockId(par3, par4 + j3, par5);
+  
++                         Block block = Block.blocksList[i3];
++ 
++                         if (i3 == 0 || block == null || block.isLeaves(par1World, par3, par4 + j3, par5))
+                          {
+                              this.setBlockAndMetadata(par1World, par3, par4 + j3, par5, Block.wood.blockID, 1);
+                          }

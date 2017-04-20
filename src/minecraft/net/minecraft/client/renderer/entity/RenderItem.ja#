@@ -1,0 +1,25 @@
+***************
+*** 152,162 ****
+                              f4 = (float)(i >> 8 & 255) / 255.0F;
+                              f6 = (float)(i & 255) / 255.0F;
+                              GL11.glColor4f(f5 * f8, f4 * f8, f6 * f8, 1.0F);
+-                             this.renderDroppedItem(par1EntityItem, icon, b0, par9, f5 * f8, f4 * f8, f6 * f8);
+                          }
+                          else
+                          {
+-                             this.renderDroppedItem(par1EntityItem, icon, b0, par9, 1.0F, 1.0F, 1.0F);
+                          }
+                      }
+                  }
+--- 143,153 ----
+                              f4 = (float)(i >> 8 & 255) / 255.0F;
+                              f6 = (float)(i & 255) / 255.0F;
+                              GL11.glColor4f(f5 * f8, f4 * f8, f6 * f8, 1.0F);
++                             this.renderDroppedItem(par1EntityItem, icon, b0, par9, f5 * f8, f4 * f8, f6 * f8, k);
+                          }
+                          else
+                          {
++                             this.renderDroppedItem(par1EntityItem, icon, b0, par9, 1.0F, 1.0F, 1.0F, k);
+                          }
+                      }
+                  }
